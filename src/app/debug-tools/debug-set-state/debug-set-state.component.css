@@ -1,0 +1,8 @@
+:host {
+  display: block;
+  padding: 5px;
+}
+
+textarea {
+  width: calc(100vw - 25px);
+}

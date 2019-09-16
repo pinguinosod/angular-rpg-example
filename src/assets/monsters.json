@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Goblin Fighter",
+    "minAttack": 5,
+    "maxAttack": 10,
+    "hp": 30
+  },
+  {
+    "id": 2,
+    "name": "Goblin Archer",
+    "minAttack": 5,
+    "maxAttack": 20,
+    "hp": 15
+  }
+]

@@ -1,0 +1,15 @@
+<h2>Battle</h2>
+
+<div>
+	<app-hero *ngFor="let hero of heroes" [hero]="hero"></app-hero>
+</div>
+<div>
+	<app-monster *ngFor="let monster of monsters" [monster]="monster"></app-monster>
+</div>
+
+<ul>
+  <li *ngFor="let entry of combatLog.slice().reverse()">{{entry}}</li>
+</ul>
+
+<button (click)="fight()">Fight</button>
+<button (click)="run()">Run</button>

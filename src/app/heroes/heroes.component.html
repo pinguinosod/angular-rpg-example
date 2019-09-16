@@ -1,0 +1,12 @@
+<div>
+	<h2>Heroes</h2>
+	<app-hero *ngFor="let hero of heroes" [hero]="hero"></app-hero>
+
+	<hr>
+
+	<app-create-hero *ngIf="heroes.length < requiredPartySize; else enoughHeroes"></app-create-hero>
+	<ng-template #enoughHeroes>
+    Enough heroes to embark on an adventure
+    <button (click)="embark()">Embark!</button>
+  </ng-template>
+</div>
