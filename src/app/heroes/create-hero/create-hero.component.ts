@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StateService } from '../../state.service';
+import { StateService } from './../../state.service';
 
 @Component({
   selector: 'app-create-hero',
@@ -7,7 +7,7 @@ import { StateService } from '../../state.service';
   styleUrls: ['./create-hero.component.css']
 })
 export class CreateHeroComponent implements OnInit {
-  private newHeroName: string;
+  public newHeroName = '';
 
   constructor(private stateService: StateService) { }
 

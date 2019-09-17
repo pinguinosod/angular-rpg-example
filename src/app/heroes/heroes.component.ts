@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 
-import { StateService } from '../state.service';
-import { Hero } from '../Hero';
+import { StateService } from './../state.service';
+import { Hero } from './../Hero';
 
 @Component({
   selector: 'app-heroes',

@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { StateService } from '../../state.service';
-import { Monster } from '../monster';
-import { Hero } from '../../Hero';
+import { StateService } from './../../state.service';
+import { Monster } from './../monster';
+import { Hero } from './../../Hero';
 import { Fighter } from './fighter';
 import { Party } from './party.enum';
 

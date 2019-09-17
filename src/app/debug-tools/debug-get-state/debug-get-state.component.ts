@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { StateService } from '../../state.service';
-import { Hero } from '../../Hero';
+import { StateService } from './../../state.service';
 
 @Component({
   selector: 'app-debug-get-state',

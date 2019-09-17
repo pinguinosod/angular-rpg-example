@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { StateService } from '../state.service';
+import { StateService } from './../state.service';
 import monsters from './../../assets/monsters.json';
 import { Monster } from './monster';
-import { Hero } from '../Hero';
+import { Hero } from './../Hero';
 
 @Component({
   selector: 'app-adventure',
