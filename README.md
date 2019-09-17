@@ -1,5 +1,7 @@
 # AngularRpgExample
 
+Tiny RPG made with Angular, I'm just learning and trying things, do not expect good practices in this code.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
 
 ## Development server
