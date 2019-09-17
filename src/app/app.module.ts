@@ -13,7 +13,7 @@ import { EncounterComponent } from './adventure/encounter/encounter.component';
 import { DebugToolsComponent } from './debug-tools/debug-tools.component';
 import { DebugGetStateComponent } from './debug-tools/debug-get-state/debug-get-state.component';
 import { DebugSetStateComponent } from './debug-tools/debug-set-state/debug-set-state.component';
-import { MonsterComponent } from './adventure/encounter/monster/monster.component';
+import { FighterComponent } from './adventure/encounter/fighter/fighter.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -27,7 +27,7 @@ import { MonsterComponent } from './adventure/encounter/monster/monster.componen
     DebugGetStateComponent,
     DebugToolsComponent,
     DebugSetStateComponent,
-    MonsterComponent],
+    FighterComponent],
   bootstrap: [AppComponent],
   providers: [StateService]
 })

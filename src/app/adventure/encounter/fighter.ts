@@ -6,4 +6,6 @@ export interface Fighter {
   party: Party;
   minAttack: number;
   maxAttack: number;
+  hpCurrent: number;
+  hpMax: number;
 }

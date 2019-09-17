@@ -15,58 +15,54 @@ export class EncounterComponent implements OnInit {
   @Input() monsters: Monster[];
   @Input() heroes: Hero[];
 
+  public friendlyParty: Fighter[] = [];
+  public enemyParty: Fighter[] = [];
   public combatLog: string[] = ['Combat started...'];
 
   constructor(private stateService: StateService) { }
 
   ngOnInit() {
-  }
-
-  fight() {
-    const fighters: Fighter[] = [];
-
-    fighters.push(...
-      [...this.monsters.map(monster => {
+    this.enemyParty.push(...
+      this.monsters.map(monster => {
         return {
           id: monster.id,
           name: monster.name,
           party: Party.ENEMY,
           minAttack: monster.minAttack,
-          maxAttack: monster.maxAttack
+          maxAttack: monster.maxAttack,
+          hpCurrent: monster.hp,
+          hpMax: monster.hp
         };
-      }),
-      ...this.heroes.map(hero => {
+      }));
+
+    this.friendlyParty.push(...
+      this.heroes.map(hero => {
         return {
           id: hero.getId(),
           name: hero.getName(),
           party: Party.FRIEND,
           minAttack: hero.getMinAttack(),
-          maxAttack: hero.getMaxAttack()
+          maxAttack: hero.getMaxAttack(),
+          hpCurrent: hero.getHP(),
+          hpMax: hero.getHP()
         };
-      })
-      ]
-    );
+      }));
+  }
 
-    console.log(fighters);
+  fight() {
+    this.friendlyParty.map(attacker => this.attack(attacker));
+    this.enemyParty.map(attacker => this.attack(attacker));
+  }
 
-    fighters.map(fighter => {
-      const rndAttackBlow = Math.random();
-      console.log(typeof fighter.minAttack);
-      console.log(typeof fighter.maxAttack);
-      console.log(fighter.minAttack, fighter.maxAttack, rndAttackBlow);
-      const dmg = fighter.minAttack + Math.floor(rndAttackBlow * fighter.maxAttack);
-      console.log('dmg:', dmg);
-      if (fighter.party === Party.FRIEND) {
-        const monsterToAttackIndex = Math.floor(Math.random() * this.monsters.length);
-        this.monsters[monsterToAttackIndex].hp -= dmg;
-        this.combatLog.push(`${fighter.name} attacks ${this.monsters[monsterToAttackIndex].name} and does ${dmg} damage.`);
-      } else {
-        const heroToAttackIndex = Math.floor(Math.random() * this.heroes.length);
-        this.heroes[heroToAttackIndex].receiveDamage(dmg);
-        this.combatLog.push(`${fighter.name} attacks ${this.heroes[heroToAttackIndex].getName()} and does ${dmg} damage.`);
-      }
-    });
-
+  attack(attacker: Fighter): void {
+    const rndAttackBlow = Math.random();
+    console.log(attacker.minAttack, attacker.maxAttack, rndAttackBlow);
+    const dmg = attacker.minAttack + Math.floor(rndAttackBlow * attacker.maxAttack);
+    console.log('dmg:', dmg);
+    const defendingParty = (attacker.party === Party.FRIEND) ? this.enemyParty : this.friendlyParty;
+    const defendingUnitIndex = Math.floor(Math.random() * defendingParty.length);
+    defendingParty[defendingUnitIndex].hpCurrent -= dmg;
+    this.combatLog.push(`${attacker.name} attacks ${defendingParty[defendingUnitIndex].name} and does ${dmg} damage.`);
   }
 
   run() {

@@ -5,6 +5,12 @@
   font-family: Monospace;
 }
 
+body {
+  display: grid;
+  place-content: center;
+  background-color: #333;
+}
+
 button {
   cursor: pointer;
 }

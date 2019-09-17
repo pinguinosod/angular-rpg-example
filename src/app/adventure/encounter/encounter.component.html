@@ -1,10 +1,10 @@
 <h2>Battle</h2>
 
 <div>
-	<app-hero *ngFor="let hero of heroes" [hero]="hero"></app-hero>
+	<app-fighter *ngFor="let fighter of friendlyParty" [fighter]="fighter"></app-fighter>
 </div>
 <div>
-	<app-monster *ngFor="let monster of monsters" [monster]="monster"></app-monster>
+	<app-fighter *ngFor="let fighter of enemyParty" [fighter]="fighter"></app-fighter>
 </div>
 
 <ul>
