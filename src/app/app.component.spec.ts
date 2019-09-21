@@ -2,6 +2,8 @@ import { TestBed, async } from '@angular/core/testing';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
+import { StateService } from './state.service';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HeroesComponent } from './heroes/heroes.component';
@@ -13,8 +15,6 @@ import { FighterComponent } from './adventure/encounter/fighter/fighter.componen
 import { DebugToolsComponent } from './debug-tools/debug-tools.component';
 import { DebugGetStateComponent } from './debug-tools/debug-get-state/debug-get-state.component';
 import { DebugSetStateComponent } from './debug-tools/debug-set-state/debug-set-state.component';
-
-import { StateService } from './state.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {

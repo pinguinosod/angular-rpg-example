@@ -3,10 +3,9 @@ import { TestBed, async } from '@angular/core/testing';
 import { FighterComponent } from './fighter.component';
 import { Party } from './../party.enum';
 
-describe('AppComponent', () => {
+describe('FighterComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [],
       declarations: [
         FighterComponent
       ],
@@ -15,8 +14,8 @@ describe('AppComponent', () => {
 
   it('should create the component', () => {
     const fixture = TestBed.createComponent(FighterComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+    const componentInstance = fixture.debugElement.componentInstance;
+    expect(componentInstance).toBeTruthy();
   });
 
   it('should render fighter with name Stuart in a h3 tag', () => {
