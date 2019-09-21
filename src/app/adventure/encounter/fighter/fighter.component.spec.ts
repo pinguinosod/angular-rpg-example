@@ -1,18 +1,12 @@
 import { TestBed, async } from '@angular/core/testing';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 
 import { FighterComponent } from './fighter.component';
-import { Fighter } from './../fighter';
 import { Party } from './../party.enum';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        BrowserModule,
-        FormsModule
-      ],
+      imports: [],
       declarations: [
         FighterComponent
       ],
