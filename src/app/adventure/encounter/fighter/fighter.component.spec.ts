@@ -18,24 +18,24 @@ describe('FighterComponent', () => {
     expect(componentInstance).toBeTruthy();
   });
 
-  it('should render fighter with name Stuart in a h3 tag', () => {
+  it('should render fighter with name Stuart in a h4 tag', () => {
     const fixture = TestBed.createComponent(FighterComponent);
     fixture.componentInstance.fighter = {
       id: 1, name: 'Stuart', party: Party.FRIEND, minAttack: 10, maxAttack: 20, hpCurrent: 50, hpMax: 100
     };
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h3').textContent).toContain('Stuart');
+    expect(compiled.querySelector('h4').textContent).toContain('Stuart');
   });
 
-  it('should render fighter with name Camila in a h3 tag', () => {
+  it('should render fighter with name Camila in a h4 tag', () => {
     const fixture = TestBed.createComponent(FighterComponent);
     fixture.componentInstance.fighter = {
       id: 1, name: 'Camila', party: Party.FRIEND, minAttack: 10, maxAttack: 20, hpCurrent: 50, hpMax: 100
     };
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h3').textContent).toContain('Camila');
+    expect(compiled.querySelector('h4').textContent).toContain('Camila');
   });
 
   it('should render fighter with hp 20/60 in a td tag', () => {

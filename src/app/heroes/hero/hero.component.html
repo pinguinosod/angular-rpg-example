@@ -1,27 +1,27 @@
-<h3>
-	{{hero.getId()}}. {{hero.getName()}}</h3>
+<h4>{{ hero.getName() }}</h4>
 <table>
-	<tr>
-		<th>Role:</th>
-		<td>{{hero.getRoleName()}}</td>
-	</tr>
-	<tr *ngIf="partyEmbarked" >
-		<th>HP:</th>
-		<td>{{hero.getHP()}}</td>
-	</tr>
-	<!--
+  <tr>
+    <th>Role:</th>
+    <td>{{ hero.getRoleName() }}</td>
+  </tr>
+  <tr *ngIf="partyEmbarked">
+    <th>HP:</th>
+    <td>{{ hero.getHP() }}</td>
+  </tr>
+  <!--
 		<tr>
 			<th>INT:</th>
 			<td>{{hero.getINT()}}</td>
 		</tr>
     -->
-	<tr *ngIf="!partyEmbarked" >
-		<th>DEX:</th>
-		<td>{{hero.getDEX()}}</td>
-	</tr>
-	<tr *ngIf="!partyEmbarked" >
-		<th>STR:</th>
-		<td>{{hero.getSTR()}}</td>
-	</tr>
+  <tr *ngIf="!partyEmbarked">
+    <th>DEX:</th>
+    <td>{{ hero.getDEX() }}</td>
+  </tr>
+  <tr *ngIf="!partyEmbarked">
+    <th>STR:</th>
+    <td>{{ hero.getSTR() }}</td>
+  </tr>
 </table>
+
 <button *ngIf="!partyEmbarked" (click)="deleteThisHero()">Dismiss</button>
