@@ -21,15 +21,21 @@ body {
 
 button {
   cursor: pointer;
-  background-color: $main-color;
-  border: 1px solid $main-color-darker;
+  background-color: $secondary-color;
+  border: 2px solid $secondary-color-darker;
+  color: $app-bg;
   padding: 3px;
   font-size: 0.9rem;
+  font-weight: bold;
 }
 
-input,
+input[type=text],
 textarea {
   font-size: 0.9rem;
+  background-color: $text-bg;
+  color: $text-color;
+  border: 2px solid $secondary-color-darker;
+  padding: 3px;
 }
 
 h1 {
@@ -43,11 +49,16 @@ h2 {
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-family: "Open Sans", cursive;
 }
 
 h4 {
   font-size: 1.3rem;
   font-family: "Oregano", cursive;
+}
+
+hr {
+  border-top: 1px solid $secondary-color;
+  border-bottom: 1px solid $secondary-color-darker;
 }

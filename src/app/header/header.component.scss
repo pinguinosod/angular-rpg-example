@@ -1,7 +1,8 @@
 @import "./../../variables";
 
 header {
-  background-color: $header-bg;
+  background-color: $primary-color;
+  border-bottom: 2px solid $primary-color-darker;
   color: $app-bg;
   padding: 10px;
   margin: 0;

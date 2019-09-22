@@ -2,5 +2,6 @@
 
 :host {
   overflow-x: auto;
-  background-color: $main-color;
+  background-color: $text-bg;
+  display: none;
 }

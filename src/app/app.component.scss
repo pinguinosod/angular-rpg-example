@@ -2,9 +2,10 @@
 
 :host {
   display: grid;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   width: 768px;
-  grid-template-rows: 45px auto 120px;
+  grid-template-rows: 45px auto auto;
   background-color: $app-bg;
   margin: auto;
 }

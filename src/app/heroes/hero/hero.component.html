@@ -4,21 +4,17 @@
     <th>Role:</th>
     <td>{{ hero.getRoleName() }}</td>
   </tr>
-  <tr *ngIf="partyEmbarked">
-    <th>HP:</th>
-    <td>{{ hero.getHP() }}</td>
-  </tr>
   <!--
 		<tr>
 			<th>INT:</th>
 			<td>{{hero.getINT()}}</td>
 		</tr>
     -->
-  <tr *ngIf="!partyEmbarked">
+  <tr>
     <th>DEX:</th>
     <td>{{ hero.getDEX() }}</td>
   </tr>
-  <tr *ngIf="!partyEmbarked">
+  <tr>
     <th>STR:</th>
     <td>{{ hero.getSTR() }}</td>
   </tr>
