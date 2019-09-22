@@ -1,8 +1,10 @@
+@import "./../../../../variables";
+
 :host {
-  background-color: #eee;
+  background-color: $main-color;
   display: inline-block;
   padding: 10px;
-  border: 2px solid #ccc;
+  border: 2px solid $main-color-darker;
   margin: 5px;
   min-width: 100px;
 }
@@ -15,5 +17,5 @@ table {
 th,
 td {
   text-align: left;
-  border-top: 2px solid #ccc;
+  border-top: 2px solid $main-color-darker;
 }

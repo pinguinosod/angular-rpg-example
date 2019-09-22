@@ -7,7 +7,7 @@ import { Hero } from './../../Hero';
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.css']
+  styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent implements OnInit, OnDestroy {
   @Input() hero: Hero;

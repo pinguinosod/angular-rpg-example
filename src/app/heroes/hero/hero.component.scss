@@ -1,8 +1,10 @@
+@import "./../../../variables";
+
 :host {
-  background-color: #eee;
+  background-color: $main-color;
   display: inline-block;
   padding: 10px;
-  border: 2px solid #ccc;
+  border: 2px solid $main-color-darker;
   margin: 5px;
   min-width: 100px;
 }
@@ -12,9 +14,10 @@ table {
   border-collapse: collapse;
 }
 
-th, td {
-  text-align:left;
-  border-top: 2px solid #ccc;
+th,
+td {
+  text-align: left;
+  border-top: 2px solid $main-color-darker;
 }
 
 button {

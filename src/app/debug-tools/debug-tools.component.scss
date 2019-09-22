@@ -1,0 +1,6 @@
+@import "./../../variables";
+
+:host {
+  overflow-x: auto;
+  background-color: $main-color;
+}

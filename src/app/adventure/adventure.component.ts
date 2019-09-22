@@ -8,7 +8,7 @@ import { Hero } from './../Hero';
 @Component({
   selector: 'app-adventure',
   templateUrl: './adventure.component.html',
-  styleUrls: ['./adventure.component.css']
+  styleUrls: ['./adventure.component.scss']
 })
 export class AdventureComponent implements OnInit {
 

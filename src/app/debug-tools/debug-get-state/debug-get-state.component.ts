@@ -5,7 +5,7 @@ import { StateService } from './../../state.service';
 @Component({
   selector: 'app-debug-get-state',
   templateUrl: './debug-get-state.component.html',
-  styleUrls: ['./debug-get-state.component.css']
+  styleUrls: ['./debug-get-state.component.scss']
 })
 export class DebugGetStateComponent implements OnInit {
 

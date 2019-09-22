@@ -1,8 +1,10 @@
+@import "./../variables";
+
 :host {
   display: grid;
   height: 100vh;
   width: 380px;
   grid-template-rows: 45px auto 120px;
-  background-color: #fff;
+  background-color: $app-bg;
   margin: auto;
 }

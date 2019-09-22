@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "./variables";
+
 * {
   margin: 0;
   padding: 0;
@@ -13,18 +16,19 @@ i {
 }
 
 body {
-  background-color: #333;
+  background-color: $body-bg;
 }
 
 button {
   cursor: pointer;
-  background-color: #ddd;
-  border: 1px solid #ccc;
+  background-color: $main-color;
+  border: 1px solid $main-color-darker;
   padding: 3px;
   font-size: 0.9rem;
 }
 
-input {
+input,
+textarea {
   font-size: 0.9rem;
 }
 

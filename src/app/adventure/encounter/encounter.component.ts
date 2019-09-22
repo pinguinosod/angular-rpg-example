@@ -9,7 +9,7 @@ import { Party } from './party.enum';
 @Component({
   selector: 'app-encounter',
   templateUrl: './encounter.component.html',
-  styleUrls: ['./encounter.component.css']
+  styleUrls: ['./encounter.component.scss']
 })
 export class EncounterComponent implements OnInit {
   @Input() monsters: Monster[];
