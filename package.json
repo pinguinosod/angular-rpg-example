@@ -5,9 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
+    "test": "if $CI; then ng test --watch false --browsers ChromeHeadless; else ng test; fi",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "if $CI; then ng e2e --protractor-config='e2e/ci.protractor.conf.js'; else ng e2e; fi"
   },
   "private": true,
   "dependencies": {
