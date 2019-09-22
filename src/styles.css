@@ -2,15 +2,38 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Monospace;
+  font-family: "Cascadia Code", Monospace;
+  font-size: 1rem;
 }
 
 body {
-  display: grid;
-  place-content: center;
   background-color: #333;
 }
 
 button {
   cursor: pointer;
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  padding: 3px;
+  font-size: 0.9rem;
+}
+
+input {
+  font-size: 0.9rem;
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1.1rem;
 }

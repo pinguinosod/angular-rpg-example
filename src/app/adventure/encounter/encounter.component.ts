@@ -56,13 +56,11 @@ export class EncounterComponent implements OnInit {
 
   attack(attacker: Fighter): void {
     const rndAttackBlow = Math.random();
-    console.log(attacker.minAttack, attacker.maxAttack, rndAttackBlow);
     const dmg = attacker.minAttack + Math.floor(rndAttackBlow * attacker.maxAttack);
-    console.log('dmg:', dmg);
     const defendingParty = (attacker.party === Party.FRIEND) ? this.enemyParty : this.friendlyParty;
     const defendingUnitIndex = Math.floor(Math.random() * defendingParty.length);
     defendingParty[defendingUnitIndex].hpCurrent -= dmg;
-    this.combatLog.push(`${attacker.name} attacks ${defendingParty[defendingUnitIndex].name} and does ${dmg} damage.`);
+    this.combatLog.push(`<b>${attacker.name}</b> attacks <b>${defendingParty[defendingUnitIndex].name}</b> and does <b>${dmg}</b> damage.`);
   }
 
   run() {
