@@ -13,9 +13,11 @@ header {
 
 h1 {
   display: inline-block;
+  color: inherit;
 }
 
 div {
   display: grid;
   align-content: center;
+  color: inherit;
 }
