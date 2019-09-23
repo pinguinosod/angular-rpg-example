@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "if $CI; then ng test --watch false --browsers ChromeHeadless; else ng test; fi",
+    "test": "ng test",
+    "coverage": "ng test --watch false --browsers ChromeHeadless --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },

@@ -18,7 +18,13 @@ module.exports = function (config) {
     coverageIstanbulReporter: {
       dir: require('path').join(__dirname, './coverage/angular-rpg-example'),
       reports: ['html', 'lcovonly', 'text-summary'],
-      fixWebpackSourcePaths: true
+      fixWebpackSourcePaths: true,
+      thresholds: {
+        statements: 55,
+        branches: 36,
+        functions: 35,
+        lines: 52
+      }
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
