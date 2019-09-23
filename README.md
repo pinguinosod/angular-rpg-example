@@ -1,5 +1,7 @@
 # AngularRpgExample
 
+![](https://github.com/pinguinosod/angular-rpg-example/workflows/Node%20CI/badge.svg)
+
 Tiny RPG made with Angular, I'm just learning and trying things, do not expect good practices in this code.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
