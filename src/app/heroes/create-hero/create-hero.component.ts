@@ -8,10 +8,12 @@ import { StateService } from './../../state.service';
 })
 export class CreateHeroComponent implements OnInit {
   public newHeroName = '';
+  public hireHeroCost: number;
 
   constructor(private stateService: StateService) { }
 
   ngOnInit() {
+    this.hireHeroCost = this.stateService.getHireHeroCost();
   }
 
   addNewHero() {

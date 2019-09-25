@@ -45,6 +45,10 @@ export class StateService {
     return this.coins;
   }
 
+  public getHireHeroCost(): number {
+    return HIRE_HERO_COST;
+  }
+
   public getRequiredPartySize(): number {
     return REQUIRED_PARTY_SIZE;
   }

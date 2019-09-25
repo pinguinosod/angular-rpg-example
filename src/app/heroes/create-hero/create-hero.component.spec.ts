@@ -28,8 +28,10 @@ describe('CreateHeroComponent', () => {
 
   it('should render title in h3 tag', () => {
     const fixture = TestBed.createComponent(CreateHeroComponent);
+    fixture.detectChanges();
+    const hireHeroCost = fixture.debugElement.componentInstance.hireHeroCost;
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h3').textContent).toContain('Hire New Hero (100 coins)');
+    expect(compiled.querySelector('h3').textContent).toContain('Hire New Hero (' + hireHeroCost + ' coins)');
   });
 
   it('should render an input without text on it', () => {
