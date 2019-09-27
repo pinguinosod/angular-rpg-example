@@ -22,27 +22,27 @@ describe('CreateHeroComponent', () => {
 
   it('should create the component', () => {
     const fixture = TestBed.createComponent(CreateHeroComponent);
-    const componentInstance = fixture.debugElement.componentInstance;
+    const componentInstance = fixture.componentInstance;
     expect(componentInstance).toBeTruthy();
   });
 
   it('should render title in h3 tag', () => {
     const fixture = TestBed.createComponent(CreateHeroComponent);
     fixture.detectChanges();
-    const hireHeroCost = fixture.debugElement.componentInstance.hireHeroCost;
-    const compiled = fixture.debugElement.nativeElement;
+    const hireHeroCost = fixture.componentInstance.hireHeroCost;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('h3').textContent).toContain('Hire New Hero (' + hireHeroCost + ' coins)');
   });
 
   it('should render an input without text on it', () => {
     const fixture = TestBed.createComponent(CreateHeroComponent);
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('input').value).toBe('');
   });
 
   it('should render a button with label Hire', () => {
     const fixture = TestBed.createComponent(CreateHeroComponent);
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('button').textContent).toContain('Hire');
   });
 });

@@ -14,7 +14,7 @@ describe('FighterComponent', () => {
 
   it('should create the component', () => {
     const fixture = TestBed.createComponent(FighterComponent);
-    const componentInstance = fixture.debugElement.componentInstance;
+    const componentInstance = fixture.componentInstance;
     expect(componentInstance).toBeTruthy();
   });
 
@@ -24,7 +24,7 @@ describe('FighterComponent', () => {
       id: 1, name: 'Stuart', party: Party.FRIEND, minAttack: 10, maxAttack: 20, hpCurrent: 50, hpMax: 100
     };
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('h4').textContent).toContain('Stuart');
   });
 
@@ -34,7 +34,7 @@ describe('FighterComponent', () => {
       id: 1, name: 'Camila', party: Party.FRIEND, minAttack: 10, maxAttack: 20, hpCurrent: 50, hpMax: 100
     };
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('h4').textContent).toContain('Camila');
   });
 
@@ -44,7 +44,7 @@ describe('FighterComponent', () => {
       id: 1, name: 'Dani', party: Party.FRIEND, minAttack: 10, maxAttack: 20, hpCurrent: 20, hpMax: 60
     };
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('td').textContent).toContain('20 / 60');
   });
 });

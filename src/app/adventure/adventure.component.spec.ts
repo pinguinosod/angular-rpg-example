@@ -20,7 +20,7 @@ describe('AdventureComponent', () => {
 
   it('should create the component', () => {
     const fixture = TestBed.createComponent(AdventureComponent);
-    const componentInstance = fixture.debugElement.componentInstance;
+    const componentInstance = fixture.componentInstance;
     expect(componentInstance).toBeTruthy();
   });
 });

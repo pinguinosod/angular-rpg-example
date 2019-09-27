@@ -18,7 +18,7 @@ describe('HeroComponent', () => {
 
   it('should create the component', () => {
     const fixture = TestBed.createComponent(HeroComponent);
-    const componentInstance = fixture.debugElement.componentInstance;
+    const componentInstance = fixture.componentInstance;
     expect(componentInstance).toBeTruthy();
   });
 
@@ -26,7 +26,7 @@ describe('HeroComponent', () => {
     const fixture = TestBed.createComponent(HeroComponent);
     fixture.componentInstance.hero = new Hero(13, 'Clarissa Explains It All', Role.Fighter, 10, 10, 11);
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('h4').textContent).toContain('Clarissa Explains It All');
   });
 
@@ -34,7 +34,7 @@ describe('HeroComponent', () => {
     const fixture = TestBed.createComponent(HeroComponent);
     fixture.componentInstance.hero = new Hero(22, 'Sabrina the Teenage Witch', Role.Archer, 14, 11, 11);
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('h4').textContent).toContain('Sabrina the Teenage Witch');
   });
 
@@ -42,7 +42,7 @@ describe('HeroComponent', () => {
     const fixture = TestBed.createComponent(HeroComponent);
     fixture.componentInstance.hero = new Hero(61, 'Archie the Archer', Role.Archer, 14, 8, 14);
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('tr:nth-child(1) > td').textContent).toContain('Archer');
   });
 
@@ -50,7 +50,7 @@ describe('HeroComponent', () => {
     const fixture = TestBed.createComponent(HeroComponent);
     fixture.componentInstance.hero = new Hero(51, 'Fighta the Fighter', Role.Fighter, 14, 14, 8);
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('tr:nth-child(1) > td').textContent).toContain('Fighter');
   });
 
@@ -58,7 +58,7 @@ describe('HeroComponent', () => {
     const fixture = TestBed.createComponent(HeroComponent);
     fixture.componentInstance.hero = new Hero(44, 'Dexter', Role.Archer, 10, 14, 9);
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('tr:nth-child(2) > td').textContent).toContain('14');
   });
 
@@ -66,7 +66,7 @@ describe('HeroComponent', () => {
     const fixture = TestBed.createComponent(HeroComponent);
     fixture.componentInstance.hero = new Hero(42, 'Shakyhandy', Role.Fighter, 10, 7, 12);
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('tr:nth-child(2) > td').textContent).toContain('7');
   });
 
@@ -74,7 +74,7 @@ describe('HeroComponent', () => {
     const fixture = TestBed.createComponent(HeroComponent);
     fixture.componentInstance.hero = new Hero(33, 'Musclehead Steve', Role.Fighter, 10, 9, 16);
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('tr:nth-child(3) > td').textContent).toContain('16');
   });
 
@@ -82,7 +82,7 @@ describe('HeroComponent', () => {
     const fixture = TestBed.createComponent(HeroComponent);
     fixture.componentInstance.hero = new Hero(34, 'Thin Tim', Role.Archer, 10, 11, 7);
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('tr:nth-child(3) > td').textContent).toContain('7');
   });
 
@@ -91,7 +91,7 @@ describe('HeroComponent', () => {
     fixture.componentInstance.hero = new Hero(35, 'Dylan the Lucky', Role.Archer, 7, 7, 7);
     fixture.componentInstance.partyEmbarked = false;
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('button').textContent).toContain('Dismiss');
   });
 
@@ -100,7 +100,7 @@ describe('HeroComponent', () => {
     fixture.componentInstance.hero = new Hero(36, 'Eugene Horowitz', Role.Fighter, 13, 13, 13);
     fixture.componentInstance.partyEmbarked = true;
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('button')).toBeNull();
   });
 });

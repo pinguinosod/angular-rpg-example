@@ -24,13 +24,13 @@ describe('HeroesComponent', () => {
 
   it('should create the component', () => {
     const fixture = TestBed.createComponent(HeroesComponent);
-    const componentInstance = fixture.debugElement.componentInstance;
+    const componentInstance = fixture.componentInstance;
     expect(componentInstance).toBeTruthy();
   });
 
   it('should render heroes in h2 tag', () => {
     const fixture = TestBed.createComponent(HeroesComponent);
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('h2').textContent).toContain('Heroes');
   });
 
@@ -42,7 +42,7 @@ describe('HeroesComponent', () => {
       new Hero(2, 'DummyHeroTwo', Role.Archer, 10, 10, 11)
     ];
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('button#embarkButton').textContent).toContain('Embark');
   });
 
@@ -51,7 +51,7 @@ describe('HeroesComponent', () => {
     fixture.componentInstance.requiredPartySize = 3;
     fixture.componentInstance.heroes = [];
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('button#embarkButton')).toBeNull();
   });
 
@@ -59,7 +59,7 @@ describe('HeroesComponent', () => {
     const fixture = TestBed.createComponent(HeroesComponent);
     fixture.componentInstance.requiredPartySize = 4;
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('app-create-hero')).not.toBeNull();
   });
 
@@ -72,7 +72,7 @@ describe('HeroesComponent', () => {
       new Hero(3, 'DummyHeroThree', Role.Archer, 10, 10, 11)
     ];
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('app-create-hero')).toBeNull();
   });
 });

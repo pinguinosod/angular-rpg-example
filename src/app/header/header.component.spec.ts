@@ -16,13 +16,13 @@ describe('HeaderComponent', () => {
 
   it('should create the component', () => {
     const fixture = TestBed.createComponent(HeaderComponent);
-    const componentInstance = fixture.debugElement.componentInstance;
+    const componentInstance = fixture.componentInstance;
     expect(componentInstance).toBeTruthy();
   });
 
   it('should render title in h1 tag', () => {
     const fixture = TestBed.createComponent(HeaderComponent);
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('RPG Heroes');
   });
 
@@ -30,7 +30,7 @@ describe('HeaderComponent', () => {
     const fixture = TestBed.createComponent(HeaderComponent);
     fixture.componentInstance.coins = 3600;
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelectorAll('div')[0].textContent).toContain('Coins:3600');
   });
 
@@ -38,7 +38,7 @@ describe('HeaderComponent', () => {
     const fixture = TestBed.createComponent(HeaderComponent);
     fixture.componentInstance.coins = 20;
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelectorAll('div')[0].textContent).toContain('Coins:20');
   });
 
@@ -46,7 +46,7 @@ describe('HeaderComponent', () => {
     const fixture = TestBed.createComponent(HeaderComponent);
     fixture.componentInstance.amountOfHeroes = 3;
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelectorAll('div')[1].textContent).toContain('Party size:3');
   });
 
@@ -54,7 +54,7 @@ describe('HeaderComponent', () => {
     const fixture = TestBed.createComponent(HeaderComponent);
     fixture.componentInstance.amountOfHeroes = 12;
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.nativeElement;
     expect(compiled.querySelectorAll('div')[1].textContent).toContain('Party size:12');
   });
 });
