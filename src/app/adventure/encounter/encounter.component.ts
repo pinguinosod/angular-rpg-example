@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 
 import { StateService } from './../../state.service';
 import { Monster } from './../monster';
@@ -14,6 +14,8 @@ import { Party } from './party.enum';
 export class EncounterComponent implements OnInit {
   @Input() monsters: Monster[];
   @Input() heroes: Hero[];
+
+  @ViewChild('combatLogElement') combatLogElement: ElementRef;
 
   public friendlyParty: Fighter[] = [];
   public enemyParty: Fighter[] = [];
@@ -49,6 +51,10 @@ export class EncounterComponent implements OnInit {
       }));
   }
 
+  ngAfterViewChecked() {        
+      this.scrollCombatLogToBottom();        
+  } 
+
   fight() {
     this.friendlyParty.map(attacker => this.attack(attacker));
     this.enemyParty.map(attacker => this.attack(attacker));
@@ -65,6 +71,10 @@ export class EncounterComponent implements OnInit {
 
   run() {
     this.stateService.partyEmbark();
+  }
+
+  scrollCombatLogToBottom(): void {
+    this.combatLogElement.nativeElement.scrollTop = this.combatLogElement.nativeElement.scrollHeight;             
   }
 
 }

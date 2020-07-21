@@ -7,8 +7,8 @@
 	<app-fighter *ngFor="let fighter of enemyParty" [fighter]="fighter"></app-fighter>
 </div>
 
-<ul>
-  <li *ngFor="let entry of combatLog.slice().reverse()" [innerHTML]="entry"></li>
+<ul #combatLogElement>
+  <li *ngFor="let entry of combatLog" [innerHTML]="entry"></li>
 </ul>
 
 <button (click)="fight()">Fight</button>
