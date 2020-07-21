@@ -49,9 +49,9 @@ describe('EncounterComponent', () => {
     componentInstance.combatLog = ['I like when you get mad', 'I guess I\'m pretty glad', 'that you\'re alone'];
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelectorAll('ul > li')[0].textContent).toContain('that you\'re alone');
+    expect(compiled.querySelectorAll('ul > li')[0].textContent).toContain('I like when you get mad');
     expect(compiled.querySelectorAll('ul > li')[1].textContent).toContain('I guess I\'m pretty glad');
-    expect(compiled.querySelectorAll('ul > li')[2].textContent).toContain('I like when you get mad');
+    expect(compiled.querySelectorAll('ul > li')[2].textContent).toContain('that you\'re alone');
   });
 
   it('should generate fiendly party based on heroes', () => {
