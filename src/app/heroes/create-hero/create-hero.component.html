@@ -1,6 +1,6 @@
 <h3>Hire New Hero ({{ hireHeroCost }} coins)</h3>
 <div>
   Give the hero a name:
-  <input type="text" [(ngModel)]="newHeroName" (keyup.enter)="addNewHero()" />
+  <input type="text" [(ngModel)]="newHeroName" (keyup.enter)="addNewHero()" maxlength="22"/>
   <button (click)="addNewHero()">Hire</button>
 </div>
